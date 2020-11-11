@@ -32,7 +32,7 @@ h6 {
 }
 
 body {
-    color: $light-text;
+    color: $dark-text;
     position: relative;
     font-size: 16px;
     line-height: 24px;
@@ -54,4 +54,9 @@ body {
         background-color: $btn-hover;
         transition: all 0.3s;
     }
+}
+
+.title {
+    font-size: 24px;
+    line-height: 36px;
 }

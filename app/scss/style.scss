@@ -2,11 +2,13 @@
 @import "libs";
 @import "fonts";
 @import "global";
+// start header
 .header {
     position: absolute;
     top: 30px;
     left: 0;
     right: 0;
+    color: $light-text;
 }
 
 .menu {
@@ -26,6 +28,8 @@
     }
 }
 
+// end header
+// start top section
 .top {
     min-height: 700px;
     padding: 25px 0;
@@ -33,6 +37,7 @@
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: cover;
+    color: $light-text;
     &__inner {
         max-width: 600px;
         margin: 0 auto;
@@ -42,7 +47,6 @@
         margin-top: 200px;
         font-size: 64px;
         line-height: 75px;
-        color: $light-text;
         border: thick double $light-text;
         padding: 20px;
     }
@@ -53,7 +57,7 @@
         margin-top: 50px;
     }
     &__socials {
-        margin-top: 150px;
+        margin-top: 120px;
     }
     &__list-item {
         display: inline-block;
@@ -62,9 +66,85 @@
         }
         img:hover {
             transform: rotate(360deg) scale(1.5);
-            transition: all 0.8s;
+            transition: transform 0.8s, background-color 0.8s;
+            background-color: $btn;
+            border-radius: 50%;
         }
     }
 }
 
+// end top section
+// start design and code section
+.design,
+.code {
+    color: $dark-text;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 110px;
+    }
+    &__info {
+        max-width: 410px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__btn {
+        margin-top: 50px;
+    }
+}
+
+// end design and code section
+// start clients section
+.clients,
+.team {
+    background-color: $gray;
+    padding: 50px 0 110px;
+    text-align: center;
+    &__title {
+        margin-bottom: 40px;
+    }
+}
+
+.slider {
+    position: relative;
+    &-item {
+        max-width: 300px;
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 15px;
+        box-shadow: 0px 0px 8px 5px rgba(78, 78, 78, 0.5);
+    }
+    &-img {
+        img {
+            width: 100%;
+        }
+    }
+    &-info {
+        padding: 10px;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 200px;
+    background-color: $btn;
+    border: none;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    &-right {
+        right: 0;
+        z-index: 10;
+    }
+    &-left {
+        left: 0;
+        z-index: 10;
+    }
+    &:hover {
+        background-color: $btn-hover;
+    }
+}
+
+// end clients section
+// start ... section
 @import "media";
