@@ -2,4 +2,69 @@
 @import "libs";
 @import "fonts";
 @import "global";
+.header {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+}
+
+.menu {
+    text-align: center;
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        &+.menu__item {
+            padding-left: 50px;
+        }
+    }
+    &__link {
+        &:hover {
+            padding-bottom: 2px;
+            border-bottom: 2px solid $light-text;
+        }
+    }
+}
+
+.top {
+    min-height: 700px;
+    padding: 25px 0;
+    background-image: url('../images/header-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    &__inner {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__title {
+        margin-top: 200px;
+        font-size: 64px;
+        line-height: 75px;
+        color: $light-text;
+        border: thick double $light-text;
+        padding: 20px;
+    }
+    &__text {
+        font-size: 20px;
+    }
+    &__btn {
+        margin-top: 50px;
+    }
+    &__socials {
+        margin-top: 150px;
+    }
+    &__list-item {
+        display: inline-block;
+        &+.top__list-item {
+            padding-left: 30px;
+        }
+        img:hover {
+            transform: rotate(360deg) scale(1.5);
+            transition: all 0.8s;
+        }
+    }
+}
+
 @import "media";

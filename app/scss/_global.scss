@@ -28,4 +28,30 @@ h5,
 h6 {
     margin: 0;
     font-size: inherit;
+    text-transform: uppercase;
+}
+
+body {
+    color: $light-text;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 15px;
+    background-color: $btn;
+    color: $light-text;
+    text-transform: uppercase;
+    font-size: 18px;
+    &:hover {
+        background-color: $btn-hover;
+        transition: all 0.3s;
+    }
 }
