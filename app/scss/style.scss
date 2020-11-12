@@ -16,6 +16,7 @@
         
         .menu {
             color: $light-text;
+            @extend %Montserrat-Semi-bold;
             text-transform: uppercase;
             text-align: center;
             font-size: 20px;
@@ -29,7 +30,7 @@
             &__link {
                 &:hover {
                     padding-bottom: 2px;
-                    border-bottom: 2px solid $light-text;
+                    border-bottom: 5px solid $title;
                 }
             }
         }
@@ -38,12 +39,13 @@
         // start top section
         .top {
             min-height: 700px;
-            padding: 25px 0;
+            padding: 25px 0 50px;
             background-image: url('../images/header-bg.jpg');
             background-repeat: no-repeat;
             background-position: bottom center;
             background-size: cover;
             color: $light-text;
+            @extend %Montserrat-Semi-bold;
             &__inner {
                 max-width: 1000px;
                 margin: 0 auto;
@@ -55,6 +57,7 @@
                 line-height: 80px;
                 border: thick double $light-text;
                 padding: 20px;
+                color: #B3D3FC;
             }
             &__text {
                 font-size: 20px;
@@ -63,7 +66,7 @@
                 margin-top: 50px;
             }
             &__socials {
-                margin-top: 120px;
+                margin-top: 80px;
             }
         }
         
@@ -75,38 +78,171 @@
             &__inner {
                 display: flex;
                 justify-content: space-between;
-                padding: 110px;
+                padding: 80px 110px;
             }
             &__info {
-                max-width: 410px;
+                max-width: 500px;
                 display: flex;
                 flex-direction: column;
             }
             &__btn {
                 margin-top: 50px;
+                .button {}
             }
         }
         
         // end design and code section
-        // start clients section
-        .clients,
-        .team {
-            background-color: $gray;
-            padding: 50px 0 110px;
-            text-align: center;
+        // start cycle section
+        .cycle {
+            background-color: $dark-bg;
+            color: $light-text;
+            &__inner {
+                display: flex;
+                flex-direction: column;
+                padding: 80px 0;
+            }
             &__title {
-                margin-bottom: 40px;
+                font-size: 30px;
+                line-height: 52px;
+                width: 700px;
+                margin-bottom: 50px;
+            }
+            &__item-box {
+                display: flex;
+                justify-content: space-between;
+            }
+            &__item {
+                max-width: 350px;
+            }
+            &__list-item {
+                margin-top: 15px;
+                list-style: square inside;
             }
         }
         
-        // end clients section
+        // end cycle section
+        // start clients & team section
+        .clients,
+        .team {
+            padding: 40px 0 80px;
+            text-align: center;
+            &__title {
+                margin-bottom: 20px;
+            }
+            &__text {
+                max-width: 900px;
+                margin: 0 auto 30px;
+            }
+            &__recrutiment-title {
+                margin: 30px 0;
+            }
+            &__btn {
+                margin-top: 50px;
+                text-align: center;
+            }
+        }
+        
+        .team {
+            background-color: $dark-bg;
+            color: $light-text;
+        }
+        
+        // end clients & team section
+        // start projects section
+        .projects {
+            padding: 40px 0 80px;
+            .title {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            &__items-box {
+                padding: 20px 0;
+                display: grid;
+                margin: 0 auto;
+                grid-template-columns: repeat(3, 1fr);
+                grid-row-gap: 20px;
+                justify-items: center;
+            }
+            &__item {
+                display: flex;
+                flex-direction: column;
+                max-width: 350px;
+                padding-bottom: 10px;
+                cursor: pointer;
+            }
+            &__item-info {
+                padding: 10px;
+            }
+            &__item-link {
+                color: $title;
+                margin-left: 10px;
+            }
+            &__btn {
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+        
+        // end projects section
+        // start results section
+        .results {
+            background-color: $dark-bg;
+            color: $light-text;
+            &__inner {
+                padding: 50px 0;
+            }
+            &__title {
+                font-size: 30px;
+                line-height: 52px;
+                width: 700px;
+                margin-bottom: 50px;
+            }
+            &__box {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            &__item {
+                width: 280px;
+                .title {
+                    min-height: 72px;
+                }
+            }
+            &__item-inner {
+                margin-top: 20px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                text-align: center;
+                padding: 15px;
+                border: 2px solid $light-text;
+                .number {
+                    font-size: 36px;
+                    line-height: 48px;
+                    @extend %Montserrat-Bold;
+                }
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+            &__img {
+                max-width: 100px;
+                img {
+                    width: 100%;
+                    margin-top: 15px;
+                }
+            }
+        }
+        
+        // start results section
         // start footer
         .footer {
-            border-top: 5px solid $btn;
             padding: 25px 0;
+            background-color: #ebebeb;
             background-image: url('../images/contacts-bg.jpg');
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: bottom center;
             background-size: cover;
             &__inner {
                 display: flex;
@@ -129,12 +265,12 @@
             }
             &__form-input,
             &__form-textarea {
-                background-color: $gray;
+                background-color: $dark-bg;
                 border: none;
                 padding: 15px;
-                color: $dark-text;
+                color: $light-text;
                 &::placeholder {
-                    color: $dark-text;
+                    color: $light-text;
                 }
             }
             &__form-input {
@@ -149,14 +285,15 @@
             &__form-btn {
                 margin-top: 10px;
                 cursor: pointer;
-                border: 2px solid $btn;
+                border: 2px solid $dark-bg;
                 box-sizing: border-box;
                 padding: 15px;
                 text-transform: uppercase;
                 font-size: 18px;
+                letter-spacing: 0.06em;
                 &:hover {
-                    background-color: $btn-hover;
-                    border: 2px solid $btn-hover;
+                    background-color: $dark-bg;
+                    border: 2px solid $dark-bg;
                     color: $light-text;
                     transition: all 0.3s;
                 }
@@ -201,7 +338,7 @@
                     &::before {
                         transform: rotate(360deg) scale(1.5);
                         transition: transform 0.8s, background-color 0.8s;
-                        background-color: $btn;
+                        background-color: $title;
                         border-radius: 50%;
                     }
                 }
@@ -223,7 +360,7 @@
                     &::before {
                         transform: rotate(360deg) scale(1.5);
                         transition: transform 0.8s, background-color 0.8s;
-                        background-color: $btn;
+                        background-color: $title;
                         border-radius: 50%;
                     }
                 }
@@ -231,4 +368,9 @@
         }
         
         // end footer
+        .lol {
+            background-color: $dark-text;
+            height: 300px;
+        }
+        
         @import "media";
