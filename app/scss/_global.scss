@@ -106,6 +106,9 @@ body {
     &-img {
         width: 300px;
         height: 300px;
+        img {
+            width: 100%;
+        }
     }
     &-info {
         padding: 10px;
@@ -143,7 +146,7 @@ body {
 .socials__list-item {
     display: inline-block;
     &+.socials__list-item {
-        padding-left: 30px;
+        margin-left: 30px;
     }
     img:hover {
         transform: rotate(360deg) scale(1.5);

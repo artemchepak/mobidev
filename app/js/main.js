@@ -6,6 +6,26 @@ $(function() {
         slidesToScroll: 1,
         prevArrow: '<button class="slick-arrow slick-arrow-left"><img src="images/icons/left-arrow.svg" alt="left arrow"></button>',
         nextArrow: '<button class="slick-arrow slick-arrow-right"><img src="images/icons/right-arrow.svg" alt="right arrow"></button>',
+        responsive: [{
+                breakpoint: 1160,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 420,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                }
+            },
+        ]
     });
     //счетчик цифр
     let target_block = $("#projects-num"); // Ищем блок 
@@ -49,5 +69,10 @@ $(function() {
 
         }
 
+    });
+
+    //бургер-меню
+    $('.menu__btn').on('click', function() {
+        $('.header__menu > ul').slideToggle();
     });
 });

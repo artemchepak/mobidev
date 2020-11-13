@@ -24,7 +24,7 @@
         &__item {
             display: inline-block;
             &+.menu__item {
-                padding-left: 50px;
+                margin-left: 50px;
             }
         }
         &__link {
@@ -33,15 +33,16 @@
                 border-bottom: 5px solid $title;
             }
         }
-        &__menu-btn {
-            width: 30px;
+        &__btn {
+            width: 43px;
             display: none;
+            margin-right: 20px;
         }
-        &__menu-row {
+        &__row {
             width: 100%;
             background-color: $light-text;
-            height: 4px;
-            margin-bottom: 4px;
+            height: 5px;
+            margin-bottom: 7px;
         }
     }
     
@@ -89,11 +90,17 @@
             display: flex;
             justify-content: space-between;
             padding: 80px 110px;
+            flex-wrap: wrap;
         }
         &__info {
             max-width: 500px;
             display: flex;
             flex-direction: column;
+        }
+        &__img {
+            img {
+                width: 100%;
+            }
         }
         &__btn {
             margin-top: 50px;
@@ -113,15 +120,17 @@
         &__title {
             font-size: 30px;
             line-height: 52px;
-            width: 700px;
+            max-width: 700px;
             margin-bottom: 50px;
         }
         &__item-box {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
         }
         &__item {
-            max-width: 350px;
+            width: 350px;
+            margin: 15px auto;
         }
         &__list-item {
             margin-top: 15px;
@@ -133,7 +142,7 @@
     // start clients & team section
     .clients,
     .team {
-        padding: 40px 0 80px;
+        padding: 40px 0 50px;
         text-align: center;
         &__title {
             margin-bottom: 20px;
@@ -213,15 +222,16 @@
         &__title {
             font-size: 30px;
             line-height: 52px;
-            width: 700px;
-            margin-bottom: 50px;
+            max-width: 700px;
         }
         &__box {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            text-align: center;
         }
         &__item {
+            margin-top: 50px;
             width: 280px;
             .title {
                 min-height: 72px;
@@ -274,6 +284,7 @@
             display: flex;
             justify-content: space-between;
             position: relative;
+            flex-wrap: wrap;
         }
         &__logo {
             margin-bottom: 50px;
@@ -288,6 +299,7 @@
         &__credits {
             text-align: right;
             margin-right: 15px;
+            color: $light-text;
         }
         &__contacts-box {
             display: flex;
@@ -345,9 +357,4 @@
     }
     
     // end footer
-    .lol {
-        background-color: $dark-text;
-        height: 300px;
-    }
-    
     @import "media";
