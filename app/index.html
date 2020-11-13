@@ -13,6 +13,40 @@
 </head>
 
 <body>
+
+    <div class="modal-form" id="modal-price" style="display: none;">
+        <!-- Знаю, что лучше вставить попап в конце страницы, но у меня с этим возникли трудности. Если вставить этот блок после секции results, galp при сохранении начинает добавлять пробел в конце id="modal" и в итоге попап отражает содержимое -->
+        <form class="form ">
+            <h4 class="form__title title ">
+                Хотите рассчитать стоимость проекта?
+            </h4>
+            <p class="form__text ">
+                Оставьте свои контакты ниже и наш менеджер свяжется с Вами в ближайшее время
+            </p>
+            <div class="form__line ">
+                <input class="form__input " type="text " placeholder="Ваше имя"><br>
+                <input class="form__input " type="tel" placeholder="Номер вашего телефона">
+            </div>
+            <button class="form__btn " type="submit ">ОТПРАВИТЬ</button>
+        </form>
+    </div>
+
+    <div class="modal-form" id="modal-consultation" style="display: none;">
+        <form class="form ">
+            <h4 class="form__title title ">
+                Нужна консультация?
+            </h4>
+            <p class="form__text ">
+                Задайте нам вопрос в форме ниже и наши эксперты обязательно свяжутся с вами в течение двух рабочих дней
+            </p>
+            <div class="form__line ">
+                <input class="form__input " type="text " placeholder="Ваше имя "><br>
+                <input class="form__input " type="tel " placeholder="Ваш e-mail ">
+            </div>
+            <textarea class="form__textarea " placeholder="Что вас интересует? "></textarea>
+            <button class="form__btn " type="submit ">ОТПРАВИТЬ</button>
+        </form>
+    </div>
     <header class="header">
         <div class="container">
             <div class="header__inner">
@@ -20,6 +54,11 @@
                     <img src="images/logo.png" alt="logo">
                 </div>
                 <nav class="menu">
+                    <div class="header__menu-btn">
+                        <div class="header__menu-row"></div>
+                        <div class="header__menu-row"></div>
+                        <div class="header__menu-row"></div>
+                    </div>
                     <ul class="menu__list">
                         <li class="menu__item">
                             <a href="#" class="menu__link">
@@ -55,13 +94,10 @@
                     разработка мобильных приложений
                 </h3>
                 <p class="top__text">
-                    Разработка и создание мобильных приложений для Android и iOS, React JS полезна как стартаперам, так и уже существующим, успешно функционирующим проектам, в которые приложения смогут вдохнуть новую жизнь.
-                </p>
-                <p class="top__text">
-                    Мы с радостью сделаем бесплатную оценку вашего проекта
+                    Если вкратце, то мы разрабатываем крутые мобильные приложения для Android и iOS. Интересно? Жмите кнопку ниже для бесплатной оценки вашего проекта
                 </p>
                 <div class="top__btn">
-                    <a href="#" class="button light-button">
+                    <a class="button light-button" data-fancybox data-src="#modal-price" href="javascript:;">
                         расчет стоимости
                     </a>
                 </div>
@@ -194,7 +230,7 @@
                     </p>
 
                     <div class="code__btn">
-                        <a href="#" class="button dark-button">
+                        <a class="button dark-button" data-fancybox data-src="#modal-consultation" href="javascript:;">
                             Заказать консультацию
                         </a>
                     </div>
@@ -219,102 +255,81 @@
                     </div>
                     <div class="slider-info">
                         <h4 class="slider-name">
-                            Vasya Pupkin
+                            Ярослав
                         </h4>
-                        <span class="slider-profession">ocupation</span>
-                        <p class="slider-text">
-                            Very satisfied with mobidev's service.
-                        </p>
+                        <span class="slider-profession">Дизайнер</span>
                     </div>
                 </div>
 
                 <div class="slider-item">
-                    <div class="slider-img" style="background-image: url('images/team/team-1.jpg')">
+                    <div class="slider-img" style="background-image: url('images/team/team-2.jpg')">
 
                     </div>
                     <div class="slider-info">
                         <h4 class="slider-name">
-                            Vasya Pupkin
+                            Анастасия
                         </h4>
-                        <span class="slider-profession">ocupation</span>
-                        <p class="slider-text">
-                            Very satisfied with mobidev's service.
-                        </p>
+                        <span class="slider-profession">Менеджер по продажам</span>
                     </div>
                 </div>
 
                 <div class="slider-item">
-                    <div class="slider-img" style="background-image: url('images/team/team-1.jpg')">
+                    <div class="slider-img" style="background-image: url('images/team/team-3.jpg')">
 
                     </div>
                     <div class="slider-info">
                         <h4 class="slider-name">
-                            Vasya Pupkin
+                            Алексей
                         </h4>
-                        <span class="slider-profession">ocupation</span>
-                        <p class="slider-text">
-                            Very satisfied with mobidev's service.
-                        </p>
+                        <span class="slider-profession">iOS разработчик</span>
                     </div>
                 </div>
 
                 <div class="slider-item">
-                    <div class="slider-img" style="background-image: url('images/team/team-1.jpg')">
+                    <div class="slider-img" style="background-image: url('images/team/team-4.jpg')">
 
                     </div>
                     <div class="slider-info">
                         <h4 class="slider-name">
-                            Vasya Pupkin
+                            Виталина
                         </h4>
-                        <span class="slider-profession">ocupation</span>
-                        <p class="slider-text">
-                            Very satisfied with mobidev's service.
-                        </p>
+                        <span class="slider-profession">HR специалист</span>
                     </div>
                 </div>
 
                 <div class="slider-item">
-                    <div class="slider-img" style="background-image: url('images/team/team-1.jpg')">
+                    <div class="slider-img" style="background-image: url('images/team/team-5.jpg')">
 
                     </div>
                     <div class="slider-info">
                         <h4 class="slider-name">
-                            Vasya Pupkin
+                            Дмитрий
                         </h4>
-                        <span class="slider-profession">ocupation</span>
-                        <p class="slider-text">
-                            Very satisfied with mobidev's service.
-                        </p>
+                        <span class="slider-profession">CEO / CTO / PM / ...</span>
                     </div>
                 </div>
 
                 <div class="slider-item">
-                    <div class="slider-img" style="background-image: url('images/team/team-1.jpg')">
+                    <div class="slider-img" style="background-image: url('images/team/team-6.jpg')">
 
                     </div>
                     <div class="slider-info">
                         <h4 class="slider-name">
-                            Vasya Pupkin
+                            Максим
                         </h4>
-                        <span class="slider-profession">ocupation</span>
-                        <p class="slider-text">
-                            Very satisfied with mobidev's service.
-                        </p>
+                        <span class="slider-profession">Flutter разработчик</span>
                     </div>
                 </div>
 
                 <div class="slider-item">
-                    <div class="slider-img" style="background-image: url('images/team/team-1.jpg')">
+                    <div class="slider-img" style="background-image: url('images/team/team-7.jpg')">
 
                     </div>
                     <div class="slider-info">
                         <h4 class="slider-name">
-                            Vasya Pupkin
+                            Валерий
                         </h4>
-                        <span class="slider-profession">ocupation</span>
-                        <p class="slider-text">
-                            Very satisfied with mobidev's service.
-                        </p>
+                        <span class="slider-profession">Просто творческая личность</span>
                     </div>
                 </div>
             </div>
@@ -342,46 +357,112 @@
                 </h4>
                 <div class="projects__items-box">
                     <div class="projects__item">
-                        <img src="images/projects/project-1.jpg" alt="project-1">
-                        <p class="projects__item-info">RhythmGO – приложение для психодиагностики в медицинских учреждениях</p>
-                        <a href="#" class="projects__item-link">
-                            Подробнее >>
+                        <a href="#">
+                            <img src="images/projects/project-1.jpg" alt="project-1">
                         </a>
+                        <div class="projects__item-info">
+                            <span class="projects__item-info-title">
+                                <a href="#">
+                                    RhythmGO
+                                </a>
+                            </span>
+                            <p class="projects__item-info-text">
+                                Приложение для психодиагностики в медицинских учреждениях
+                            </p>
+                            <a href="#" class="projects__item-link">
+                                Подробнее >>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects__item">
-                        <img src="images/projects/project-1.jpg" alt="project-1">
-                        <p class="projects__item-info">RhythmGO – приложение для психодиагностики в медицинских учреждениях</p>
-                        <a href="#" class="projects__item-link">
-                            Подробнее >>
+                        <a href="#">
+                            <img src="images/projects/project-1.jpg" alt="project-1">
                         </a>
+                        <div class="projects__item-info">
+                            <span class="projects__item-info-title">
+                                <a href="#">
+                                    RhythmGO
+                                </a>
+                            </span>
+                            <p class="projects__item-info-text">
+                                Приложение для психодиагностики в медицинских учреждениях
+                            </p>
+                            <a href="#" class="projects__item-link">
+                                Подробнее >>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects__item">
-                        <img src="images/projects/project-1.jpg" alt="project-1">
-                        <p class="projects__item-info">RhythmGO – приложение для психодиагностики в медицинских учреждениях</p>
-                        <a href="#" class="projects__item-link">
-                            Подробнее >>
+                        <a href="#">
+                            <img src="images/projects/project-1.jpg" alt="project-1">
                         </a>
+                        <div class="projects__item-info">
+                            <span class="projects__item-info-title">
+                                <a href="#">
+                                    RhythmGO
+                                </a>
+                            </span>
+                            <p class="projects__item-info-text">
+                                Приложение для психодиагностики в медицинских учреждениях
+                            </p>
+                            <a href="#" class="projects__item-link">
+                                Подробнее >>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects__item">
-                        <img src="images/projects/project-1.jpg" alt="project-1">
-                        <p class="projects__item-info">RhythmGO – приложение для психодиагностики в медицинских учреждениях</p>
-                        <a href="#" class="projects__item-link">
-                            Подробнее >>
+                        <a href="#">
+                            <img src="images/projects/project-1.jpg" alt="project-1">
                         </a>
+                        <div class="projects__item-info">
+                            <span class="projects__item-info-title">
+                                <a href="#">
+                                    RhythmGO
+                                </a>
+                            </span>
+                            <p class="projects__item-info-text">
+                                Приложение для психодиагностики в медицинских учреждениях
+                            </p>
+                            <a href="#" class="projects__item-link">
+                                Подробнее >>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects__item">
-                        <img src="images/projects/project-1.jpg" alt="project-1">
-                        <p class="projects__item-info">RhythmGO – приложение для психодиагностики в медицинских учреждениях</p>
-                        <a href="#" class="projects__item-link">
-                            Подробнее >>
+                        <a href="#">
+                            <img src="images/projects/project-1.jpg" alt="project-1">
                         </a>
+                        <div class="projects__item-info">
+                            <span class="projects__item-info-title">
+                                <a href="#">
+                                    RhythmGO
+                                </a>
+                            </span>
+                            <p class="projects__item-info-text">
+                                Приложение для психодиагностики в медицинских учреждениях
+                            </p>
+                            <a href="#" class="projects__item-link">
+                                Подробнее >>
+                            </a>
+                        </div>
                     </div>
                     <div class="projects__item">
-                        <img src="images/projects/project-1.jpg" alt="project-1">
-                        <p class="projects__item-info">RhythmGO – приложение для психодиагностики в медицинских учреждениях</p>
-                        <a href="#" class="projects__item-link">
-                            Подробнее >>
+                        <a href="#">
+                            <img src="images/projects/project-1.jpg" alt="project-1">
                         </a>
+                        <div class="projects__item-info">
+                            <span class="projects__item-info-title">
+                                <a href="#">
+                                    RhythmGO
+                                </a>
+                            </span>
+                            <p class="projects__item-info-text">
+                                Приложение для психодиагностики в медицинских учреждениях
+                            </p>
+                            <a href="#" class="projects__item-link">
+                                Подробнее >>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="projects__btn">
@@ -392,6 +473,7 @@
             </div>
         </div>
     </section>
+
     <section class="results">
         <div class="container">
             <div class="results__inner">
@@ -399,6 +481,7 @@
                 <h4 class="results__title">
                     Всего за 1 год работы нашей компании мы:
                 </h4>
+
                 <div class="results__box">
                     <div class="results__item">
                         <h4 class="title">
@@ -471,6 +554,7 @@
             </div>
         </div>
         </div>
+        
     </section>
 
     <section class="clients ">
@@ -485,66 +569,71 @@
                     </div>
                     <div class="slider-info ">
                         <h4 class="slider-name ">
-                            Vasya Pupkin
+                            Валерия
                         </h4>
+                        <span class="slider-profession ">&laquo;<b><i>Circus Ltd</i></b>&raquo;, Украина</span>
                         <p class="slider-text ">
-                            Very satisfied with mobidev's service.
+                            Выражаю благодарность всему коллективу компании Mobidev за разработку приложения Circus! Отдельное спасибо дизайнеру Ярославу за высокие стандарты качества работы.
                         </p>
                     </div>
                 </div>
 
                 <div class="slider-item ">
                     <div class="slider-img ">
-                        <img src="images/clients/client-1.jpg " alt="client photo ">
+                        <img src="images/clients/client-2.jpg " alt="client photo ">
                     </div>
                     <div class="slider-info ">
                         <h4 class="slider-name ">
-                            Vasya Pupkin
+                            Константин
                         </h4>
+                        <span class="slider-profession ">&laquo;<b><i>Pitch & Co</i></b>&raquo;, Молдова</span>
                         <p class="slider-text ">
-                            Very satisfied with mobidev's service.
+                            Наша компания выражает благодарность за проделанную работу. Мы остались довольны подходом специалистов Mobidev к нашему проекту, взаимодействием на всех уровнях, профессионализмом и скоростью работы.
                         </p>
                     </div>
                 </div>
 
                 <div class="slider-item ">
                     <div class="slider-img ">
-                        <img src="images/clients/client-1.jpg " alt="client photo ">
+                        <img src="images/clients/client-3.jpg " alt="client photo ">
                     </div>
                     <div class="slider-info ">
                         <h4 class="slider-name ">
-                            Vasya Pupkin
+                            Бутанназиба 
                         </h4>
+                        <span class="slider-profession ">&laquo;<b><i>MoneyDJARO</i></b>&raquo;, Нигерия</span>
                         <p class="slider-text ">
-                            Very satisfied with mobidev's service.
+                            Мы остались очень довольны результатами работы с компанией Mobidev. За все время нашего сотрудничества работники Mobidev демонстрировали высокий профессионализм, умение вести конструктивные диалоги, нацеленность на достижение высокого уровня при оптимизации затрат.
                         </p>
                     </div>
                 </div>
 
                 <div class="slider-item ">
                     <div class="slider-img ">
-                        <img src="images/clients/client-1.jpg " alt="client photo ">
+                        <img src="images/clients/client-4.jpg " alt="client photo ">
                     </div>
                     <div class="slider-info ">
                         <h4 class="slider-name ">
-                            Vasya Pupkin
+                            Клетус
                         </h4>
+                        <span class="slider-profession ">&laquo;<b><i>Cletus and Son</i></b>&raquo;, США</span>
                         <p class="slider-text ">
-                            Very satisfied with mobidev's service.
+                            Хочу выразить свою благодарность компании Mobidev за работу над приложением Forward и особенно отметить высокий уровень подготовки команды, которая впечатлила своей креативностью, рациональностью и проработкой деталей в ходе выполнения поставленных задач.
                         </p>
                     </div>
                 </div>
 
                 <div class="slider-item ">
                     <div class="slider-img ">
-                        <img src="images/clients/client-1.jpg " alt="client photo ">
+                        <img src="images/clients/client-5.jpg " alt="client photo ">
                     </div>
                     <div class="slider-info ">
                         <h4 class="slider-name ">
-                            Vasya Pupkin
+                            Светлана
                         </h4>
+                        <span class="slider-profession ">&laquo;<b><i>Link-And-In</i></b>&raquo;, Россия</span>
                         <p class="slider-text ">
-                            Very satisfied with mobidev's service.
+                            Благодарю команду Mobidev за разработку мобильного приложения для проекта Link. Я очень ценю, что команда ответственно подошла к выполнению поставленных задач, всегда находилась на связи и, даже не смотря на вносимые мной правки, завершила проект в сроки, прописанные в договоре.
                         </p>
                     </div>
                 </div>
@@ -558,19 +647,19 @@
             <div class="footer__inner ">
                 <div class="footer__inner-box ">
                     <div class="footer__form ">
-                        <form>
-                            <h4 class="footer__form-title title ">
+                        <form class="form ">
+                            <h4 class="form__title title ">
                                 Остались вопросы?
                             </h4>
-                            <p class="footer__form-text ">
+                            <p class="form__text ">
                                 Мы обязательно свяжемся с вами в течение двух рабочих дней
                             </p>
-                            <div class="footer__form-line ">
-                                <input class="footer__form-input " type="text " placeholder="Ваше имя ">
-                                <input class="footer__form-input " type="email " placeholder="Ваш e-mail ">
+                            <div class="form__line ">
+                                <input class="form__input " type="text " placeholder="Ваше имя ">
+                                <input class="form__input " type="email " placeholder="Ваш e-mail ">
                             </div>
-                            <textarea class="footer__form-textarea " placeholder="Что вас интересует? "></textarea>
-                            <button class="footer__form-btn " type="submit ">ОТПРАВИТЬ</button>
+                            <textarea class="form__textarea " placeholder="Что вас интересует? "></textarea>
+                            <button class="form__btn " type="submit ">ОТПРАВИТЬ</button>
                         </form>
                     </div>
                     <div class="footer__info ">
@@ -622,7 +711,9 @@
                     </span>
             </div>
         </div>
+        
     </footer>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js "></script>
     <script src="js/libs.min.js "></script>

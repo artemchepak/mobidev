@@ -1,0 +1,25 @@
+@media (max-width: 960px) {
+    .menu {
+        &-btn {
+            display: block;
+        }
+        ul {
+            display: none;
+            position: absolute;
+            top: 120px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 2;
+            background-color: #fff;
+            border-bottom: 5px solid #2aacc8;
+        }
+        li {
+            display: block;
+            text-align: center;
+        }
+        li+li {
+            margin-left: 0;
+        }
+    }
+}
