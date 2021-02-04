@@ -35,48 +35,48 @@
         }
     }
     
-    @media (max-width: 960px) {}
-    
-    .menu {
-        &__btn {
-            position: relative;
-            display: block;
-            z-index: 3;
-        }
-        &__link {
-            display: block;
-            &:hover {
-                // background-color: $title;
-                padding-bottom: 0;
-                border-bottom: none;
+    @media (max-width: 960px) {
+        .menu {
+            &__btn {
+                position: relative;
+                display: block;
+                z-index: 3;
             }
-        }
-        &__item {
-            padding: 10px 0;
-            &:hover {
-                background-color: $title;
+            &__link {
+                display: block;
+                &:hover {
+                    // background-color: $title;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
             }
-        }
-        &__list {
-            display: none;
-            position: absolute;
-            top: -25px;
-            left: 0;
-            right: 0;
-            width: 100%;
-            z-index: 2;
-            background-color: $dark-bg;
-            border-bottom: 5px solid $light-text;
-            padding: 43px 0;
-        }
-        li {
-            display: block;
-            text-align: center;
-            margin-top: 50px;
-            font-size: 30px;
-        }
-        &__item+.menu__item {
-            margin-left: 0;
+            &__item {
+                padding: 10px 0;
+                &:hover {
+                    background-color: $title;
+                }
+            }
+            &__list {
+                display: none;
+                position: absolute;
+                top: -25px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                z-index: 2;
+                background-color: $dark-bg;
+                border-bottom: 5px solid $light-text;
+                padding: 43px 0;
+            }
+            li {
+                display: block;
+                text-align: center;
+                margin-top: 50px;
+                font-size: 30px;
+            }
+            &__item+.menu__item {
+                margin-left: 0;
+            }
         }
     }
     

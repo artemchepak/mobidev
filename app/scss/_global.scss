@@ -92,7 +92,7 @@ body {
         background-color: #fff;
         border-radius: 5px;
         margin: 15px;
-        box-shadow: 0px 0px 8px 5px rgba(211, 211, 211, 0.5);
+        // box-shadow: 0px 0px 8px 5px rgba(211, 211, 211, 0.5);
         transform: scale(0.9);
         &:hover {
             transform: scale(1);
@@ -125,11 +125,15 @@ body {
 .slick-arrow {
     position: absolute;
     top: 200px;
-    background-color: #5b737f6e;
-    border: 3px solid $title;
-    width: 45px;
-    height: 45px;
+    background-color: transparent;
+    // border: 3px solid $title;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
     &-right {
         right: 0;
         z-index: 10;
@@ -139,7 +143,7 @@ body {
         z-index: 10;
     }
     &:hover {
-        background-color: $title;
+        transform: scale(1.2);
     }
 }
 
