@@ -28,4 +28,190 @@ h5,
 h6 {
     margin: 0;
     font-size: inherit;
+    text-transform: uppercase;
+}
+
+body {
+    color: $dark-text;
+    position: relative;
+    @extend %Montserrat-Regular;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 15px;
+    text-transform: uppercase;
+    @extend %Montserrat-Semi-bold;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.06em;
+    &:hover {
+        transition: all 0.3s;
+    }
+}
+
+.light-button {
+    border: 2px solid $light-text;
+    color: $light-text;
+    &:hover {
+        background-color: $title;
+    }
+}
+
+.dark-button {
+    border: 2px solid $dark-text;
+    color: $dark-text;
+    &:hover {
+        color: $light-text;
+        background-color: $title;
+    }
+}
+
+.title {
+    @extend %Montserrat-Bold;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    color: $title;
+}
+
+.slider {
+    position: relative;
+    text-align: center;
+    &-item {
+        color: $dark-text;
+        max-width: 300px;
+        background-color: #fff;
+        border-radius: 5px;
+        margin: 15px;
+        // box-shadow: 0px 0px 8px 5px rgba(211, 211, 211, 0.5);
+        transform: scale(0.9);
+        &:hover {
+            transform: scale(1);
+            transition: all 0.5s;
+        }
+    }
+    &-profession {
+        min-height: 60px;
+        margin-top: 10px;
+    }
+    &-img {
+        width: 300px;
+        height: 300px;
+        img {
+            width: 100%;
+        }
+    }
+    &-info {
+        padding: 10px;
+    }
+    &-text {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    &-profession {
+        display: block;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 200px;
+    background-color: transparent;
+    // border: 3px solid $title;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+    &-right {
+        right: 0;
+        z-index: 10;
+    }
+    &-left {
+        left: 0;
+        z-index: 10;
+    }
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.socials__list-item {
+    display: inline-block;
+    &+.socials__list-item {
+        margin-left: 30px;
+    }
+    img:hover {
+        transform: rotate(360deg) scale(1.5);
+        transition: transform 0.8s, background-color 0.8s;
+        background-color: $title;
+        border-radius: 50%;
+    }
+}
+
+.form {
+    width: 450px;
+    &__line {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__input,
+    &__textarea {
+        background-color: $dark-bg;
+        border: none;
+        padding: 15px;
+        color: $light-text;
+        &::placeholder {
+            color: $light-text;
+        }
+    }
+    &__input {
+        width: 49%;
+    }
+    &__textarea {
+        min-height: 150px;
+        width: 100%;
+        margin-top: 10px;
+        resize: none;
+    }
+    &__btn {
+        margin-top: 10px;
+        cursor: pointer;
+        border: 2px solid $dark-bg;
+        box-sizing: border-box;
+        padding: 15px;
+        text-transform: uppercase;
+        font-size: 18px;
+        letter-spacing: 0.06em;
+        &:hover {
+            background-color: $dark-bg;
+            border: 2px solid $dark-bg;
+            color: $light-text;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.modal-form {
+    .form__line {
+        display: flex;
+        flex-direction: column;
+    }
+    .form__input {
+        width: 100%;
+    }
+    .form__input:nth-child(3) {
+        margin-top: 10px;
+    }
 }

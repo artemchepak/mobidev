@@ -1,0 +1,182 @@
+    @media (max-width:1160px) {
+        .design,
+        .code {
+            &__btn {
+                text-align: center;
+            }
+            &__inner {
+                padding: 50px 15px;
+            }
+            &__info,
+            &__img {
+                margin: 0 auto;
+            }
+        }
+        .design {
+            &__img {
+                margin-top: 50px;
+            }
+        }
+        .code {
+            &__img {
+                margin-bottom: 50px;
+            }
+        }
+        .projects {
+            &__items-box {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .results {
+            &__box {
+                margin: 0 auto;
+                max-width: 635px;
+            }
+        }
+    }
+    
+    @media (max-width: 960px) {
+        .menu {
+            &__btn {
+                position: relative;
+                display: block;
+                z-index: 3;
+            }
+            &__link {
+                display: block;
+                &:hover {
+                    // background-color: $title;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+            }
+            &__item {
+                padding: 10px 0;
+                &:hover {
+                    background-color: $title;
+                }
+            }
+            &__list {
+                display: none;
+                position: absolute;
+                top: -25px;
+                left: 0;
+                right: 0;
+                width: 100%;
+                z-index: 2;
+                background-color: $dark-bg;
+                border-bottom: 5px solid $light-text;
+                padding: 43px 0;
+            }
+            li {
+                display: block;
+                text-align: center;
+                margin-top: 50px;
+                font-size: 30px;
+            }
+            &__item+.menu__item {
+                margin-left: 0;
+            }
+        }
+    }
+    
+    @media (max-width: 800px) {
+        .button {
+            font-size: 16px;
+        }
+        .cycle {
+            &__inner {
+                padding: 30px 0;
+            }
+            &__title {
+                font-size: 24px;
+                line-height: 36px;
+            }
+            &__item {
+                width: 300px;
+            }
+        }
+        .projects {
+            &__items-box {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        .footer {
+            &__inner-box {
+                width: 601px;
+                margin: 0 auto;
+            }
+            &__form,
+            &__info {
+                margin: 0 auto;
+                width: 450px;
+            }
+            &__form {
+                margin-bottom: 25px;
+            }
+        }
+    }
+    
+    @media (max-width: 600px) {
+        body {
+            font-size: 16px;
+        }
+        .title {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .top__title {
+            margin-top: 100px;
+            margin-bottom: 30px;
+            font-size: 30px;
+            line-height: 50px;
+        }
+        .form {
+            width: 280px;
+            font-size: 16px;
+            padding: 15px;
+            &__btn {
+                margin-top: 25px;
+            }
+        }
+        .modal-form {
+            padding: 15px;
+        }
+        .button {
+            text-align: center;
+            font-size: 12px;
+            height: 50px;
+        }
+        .results {
+            &__box {
+                max-width: 290px;
+            }
+        }
+        .footer {
+            &__inner-box {
+                width: 300px;
+                margin: 0 auto;
+            }
+            &__contacts-box a {
+                font-size: 18px;
+            }
+            &__socials {
+                margin: 0 auto;
+                width: 50px;
+            }
+            .socials__list-item {
+                display: block;
+                &+.socials__list-item {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 400px) {
+        .projects {
+            &__item {
+                max-width: 300px;
+            }
+        }
+    }
