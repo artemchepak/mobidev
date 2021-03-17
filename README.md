@@ -1,10 +1,19 @@
 # MobiDEV
 
-MobiDEV - one page markup project, implemented using HTML, SCSS, jQuery, Slick slider, Magnific Popup, GIT, GULP and Figma.
+MobiDEV - one page markup project
+
+[Demo link](https://artemchepak.github.io/mobidev/app/index.html) 
+
+## Project screencast
 
 ![project screencast](/mobidev-screencast.gif)
 
-Demo: https://artemchepak.github.io/mobidev/app/index.html
+## Technology stack  
 
-
-
+ - HTML
+ - CSS (SCSS)
+ - JS (jQuery)
+ - jQuery plugins (Slick slider, Magnific Popup)
+ - GIT
+ - GULP
+ - Figma
